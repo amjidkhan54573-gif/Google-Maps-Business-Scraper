@@ -1,5 +1,7 @@
 # 🗺️ Google Maps Business Scraper
 
+![Google Maps Scraper](assets/google-maps-scraper.svg)
+
 > **A Selenium-powered Python scraper for collecting Google Maps business data and exporting it to CSV.**
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -51,70 +53,23 @@ The project was built as a practical exercise in **dynamic web scraping, browser
 ## ⚙️ How It Works
 
 ```text
-Start
-  ↓
-Open Google Maps
-  ↓
-Enter search query
-  ↓
-Wait for results
-  ↓
-Collect listing URLs
-  ↓
-Scroll results feed
-  ↓
-Collect new listings
-  ↓
-Open each listing
-  ↓
-Extract business details
-  ↓
-Save data to CSV
-  ↓
-Finish
+Start → Open Google Maps → Search → Wait for Results → Collect Listings → Scroll → Open Listings → Extract Data → Export CSV
 ```
 
 ## ▶️ Run the Project
 
-### 1. Clone the repository
-
 ```bash
 git clone https://github.com/amjidkhan54573-gif/Google-map-.git
 cd Google-map-
-```
-
-### 2. Install Selenium
-
-```bash
-pip install selenium
-```
-
-### 3. Run the scraper
-
-```bash
+pip install -r requirements.txt
 python main.py
 ```
 
-> **Note:** If your Python file has a different name, replace `main.py` with your filename.
-
 ## 📁 Output
 
-The scraper creates a CSV file containing the collected business data:
-
-```text
-schools.csv
-```
-
-Example structure:
-
-```text
-name,google_maps_url,rating,reviews,address,phone,website
-Business Name,https://...,4.6,120 reviews,Address,...,https://...
-```
+The scraper creates a CSV file containing the collected business data, for example `schools.csv`.
 
 ## 🧠 What I Practiced
-
-This project helped me strengthen practical Selenium skills including:
 
 - `find_element()` and `find_elements()`
 - CSS selectors
@@ -130,14 +85,9 @@ This project helped me strengthen practical Selenium skills including:
 
 ## 🔧 Possible Improvements
 
-Future versions can add:
-
-- Configurable search queries
-- Configurable maximum results
-- Better pagination/scroll detection
+- Configurable search queries and result limits
 - More robust selectors
-- Logging instead of console-only output
-- Retry mechanisms for transient failures
+- Logging and retry mechanisms
 - Additional business fields
 - Data cleaning and validation
 - Optional pandas-based export
